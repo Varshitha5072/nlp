@@ -1,0 +1,5 @@
+data <- c(1,2,3,4)
+q1 <- quantile(data,0.25)
+q2 <- quantile(data,0.75)
+cat(q1)**
+cat(q2)
