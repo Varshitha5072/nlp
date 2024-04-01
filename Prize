@@ -1,0 +1,7 @@
+sales_prices <- c(5, 10, 11, 13, 15, 35, 50, 55, 72, 92, 204, 215)
+bins_eq_freq <- cut(sales_prices, breaks = 3, labels = FALSE)
+bins_eq_width <- cut(sales_prices, breaks = 3, labels = FALSE, include.lowest = TRUE)
+bins_clustering <- kmeans(matrix(sales_prices), centers = 3)$cluster
+cat("(a) Equal-frequency (equi depth) partitioning:", bins_eq_freq, "\n")
+cat("(b) Equal-width partitioning:", bins_eq_width, "\n")
+cat("(c) Clustering:", bins_clustering, "\n")
