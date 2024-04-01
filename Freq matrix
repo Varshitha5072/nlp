@@ -1,0 +1,7 @@
+prices <- c(5,10,11,13,15,35,50,55,72,92,204,215)
+frequency <- cut(prices,breaks = 3,labels=FALSE)
+width <- cut(prices,breaks=3,labels=FALSE,include.lowest=TRUE)
+cluster <- kmeans(matrix(prices),centers=3)$cluster
+cat("frequency",frequency)
+cat("width",width)
+cat("cluster",cluster)
